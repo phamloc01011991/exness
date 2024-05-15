@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { languagePack } from '../../../languages';
 import request from '../../../utils/request'
-import HistoryDetail from '../../Layout/person/HistoryDetail.vue'
+import HistoryDetail from '../../layout/person/HistoryDetail.vue'
 const lstHistory = ref(false)
 const itemDetail = ref()
 const showHistoryDetail = ref(false)

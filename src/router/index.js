@@ -6,7 +6,7 @@ import History from '../views/History/index.vue'
 import Invest from '../views/Invest/index.vue'
 import Analysis from '../views/Person/index.vue'
 import Profile from '../views/Profile/index.vue'
-import Not from '../views/Layout/not.vue'
+import Not from '../views/layout/not.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

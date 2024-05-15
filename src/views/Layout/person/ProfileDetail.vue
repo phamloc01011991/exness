@@ -2,7 +2,7 @@
 import request from '../../../utils/request';
 import { languagePack } from '../../../languages';
 import { onMounted, ref } from 'vue';
-import AvatarOption from '../../Layout/person/AvatarOption.vue';
+import AvatarOption from '../../layout/person/AvatarOption.vue';
 import store from '../../../stores';
 
 const emit = defineEmits(['close-popup', 'loadcheck']);

@@ -1,24 +1,24 @@
 <script setup>
 import { ref, computed, watch, provide, onMounted, reactive, onUnmounted, onBeforeMount } from 'vue';
 import { languagePack } from '../../languages/index'
-import PopUser from '../Layout/PopUser.vue';
-import LangPopup from '../Layout/LangPopup.vue';
+import PopUser from '../layout/PopUser.vue';
+import LangPopup from '../layout/LangPopup.vue';
 import { formatUsdt, usdToVnd, formatVnd } from '../../utils/money.js';
-import Depoint from '../Layout/person/depoit.vue';
+import Depoint from '../layout/person/depoit.vue';
 import { onLoadIcon } from '../../utils/orther';
 import { OpenPopup } from '../../utils/plugin';
-import Invite from '../Layout/home/Invite.vue';
+import Invite from '../layout/home/Invite.vue';
 import store from '../../stores/index'
-import loadApp from '../Layout/LoadApp.vue'
+import loadApp from '../layout/LoadApp.vue'
 import request from '../../utils/request'
-import Item from '../Layout/Item.vue'
-import Item1 from '../Layout/Item1.vue'
-import HomeNotification from '../Layout/HomeNotification.vue';
-import Search from '../Layout/Search.vue'
-import Bonus from '../Layout/person/Bonus.vue';
-import PersonNotification from '../Layout/person/notification.vue'
-import SupportVip from '../Layout/person/supportVip.vue'
-import MoreFuncs from '../Layout/home/MoreFuncs.vue'
+import Item from '../layout/Item.vue'
+import Item1 from '../layout/Item1.vue'
+import HomeNotification from '../layout/HomeNotification.vue';
+import Search from '../layout/Search.vue'
+import Bonus from '../layout/person/Bonus.vue';
+import PersonNotification from '../layout/person/notification.vue'
+import SupportVip from '../layout/person/supportVip.vue'
+import MoreFuncs from '../layout/home/MoreFuncs.vue'
 
 const farmingAmount = ref(0)
 const isShowMore = ref(false)

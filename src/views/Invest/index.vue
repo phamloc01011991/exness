@@ -1,13 +1,13 @@
 <script setup>
     import {  ref, onMounted } from 'vue';
     import { languagePack } from '../../languages/index'
-    import loadApp from '../Layout/LoadApp.vue';
+    import loadApp from '../layout/LoadApp.vue';
     import request from '../../utils/request'
     import { formatUsdt, usdToVnd } from '../../utils/money'
-    import Introduce from '../Layout/invest/introduce.vue'
-    import Caculate from '../Layout/invest/caculate.vue'
-    import Banner from '../Layout/invest/banner.vue'
-    import ItemFarming from '../Layout/invest/ItemFarming.vue'
+    import Introduce from '../layout/invest/introduce.vue'
+    import Caculate from '../layout/invest/caculate.vue'
+    import Banner from '../layout/invest/banner.vue'
+    import ItemFarming from '../layout/invest/ItemFarming.vue'
 
     const showIntroduce = ref(false)
     const showCaculate = ref(false)

@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { languagePack } from '../../../languages';
-import Depoint from '../../Layout/person/depoit.vue';
+import Depoint from '../../layout/person/depoit.vue';
 import { formatUsdt } from '../../../utils/money'
 const theme = ref(localStorage.getItem('theme') || 'dark');;
 const usdDefault = ref(0)

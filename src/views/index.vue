@@ -1,7 +1,7 @@
 <script setup>
 import {  ref } from 'vue'
-import Header from './Layout/Header.vue'
-import Footer from './Layout/Footer.vue'
+import Header from './layout/Header.vue'
+import Footer from './layout/Footer.vue'
 
 const checkLoad = ref('load')
 async function checkConnect(){
