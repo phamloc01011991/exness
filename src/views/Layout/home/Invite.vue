@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { languagePack } from '../../../languages';
-import SupportInvite from '../../layout/home/supportInvite.vue'
+import SupportInvite from '../../Layout/home/supportInvite.vue'
 const emit =defineEmits(['close-popup']);
 const closePopup = () => {
   emit('close-popup');

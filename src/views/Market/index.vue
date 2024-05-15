@@ -1,10 +1,10 @@
 <script setup>
 import { ref, onMounted,onUnmounted  } from 'vue'
 import { languagePack } from '../../languages'
-import Item from '../layout/Item.vue'
-import Item1 from '../layout/Item1.vue'
+import Item from '../Layout/Item.vue'
+import Item1 from '../Layout/Item1.vue'
 import request from '../../utils/request'
-import loadApp from '../layout/LoadApp.vue'
+import loadApp from '../Layout/LoadApp.vue'
 
 const loadding = ref(false)
 const idInterval = ref('')

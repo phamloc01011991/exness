@@ -1,10 +1,10 @@
 <script setup>
 import { ref, computed, watch, provide, onMounted, reactive } from 'vue'
 import { languagePack } from '../../languages/index'
-import PopBuy from '../layout/PopBuy.vue'
+import PopBuy from '../Layout/PopBuy.vue'
 import { RouterLink, useRouter } from 'vue-router'
 import request from '../../utils/request'
-import loadApp from '../layout/LoadApp.vue'
+import loadApp from '../Layout/LoadApp.vue'
 import store from '../../stores/index'
 const coinDefaul = ref('AUDCAD')
 const router = useRouter()

@@ -1,21 +1,21 @@
 <script setup>
 import { ref, watch, onMounted } from 'vue';
 import { languagePack } from '../../languages';
-import Upload from '../layout/person/upload.vue';
-import depoit from '../layout/person/depoit.vue';
-import Bank from '../layout/person/bank.vue';
-import changepass from '../layout/person/changepass.vue';
-import profile from '../layout/person/ProfileDetail.vue';
-import supportScoreCredit from '../layout/person/supportScoreCredit.vue';
-import SupportUpload from '../layout/person/SupportUpload.vue';
-import LightMode from '../layout/LightMode.vue';
+import Upload from '../Layout/person/upload.vue';
+import depoit from '../Layout/person/depoit.vue';
+import Bank from '../Layout/person/bank.vue';
+import changepass from '../Layout/person/changepass.vue';
+import profile from '../Layout/person/ProfileDetail.vue';
+import supportScoreCredit from '../Layout/person/supportScoreCredit.vue';
+import SupportUpload from '../Layout/person/SupportUpload.vue';
+import LightMode from '../Layout/LightMode.vue';
 import request from '../../utils/request'
-import Invite from '../layout/home/Invite.vue';
-import Bonus from '../layout/person/Bonus.vue';
+import Invite from '../Layout/home/Invite.vue';
+import Bonus from '../Layout/person/Bonus.vue';
 import { OpenPopup } from '../../utils/plugin';
-import supportVip from '../layout/person/supportVip.vue';
-import LangPopup from '../layout/LangPopup.vue';
-import LoadApp from '../layout/LoadApp.vue';
+import supportVip from '../Layout/person/supportVip.vue';
+import LangPopup from '../Layout/LangPopup.vue';
+import LoadApp from '../Layout/LoadApp.vue';
 const loadding = ref(false)
 const showVip = ref(false)
 const showBonus = ref(false)

@@ -1,9 +1,9 @@
 <script setup>
     import {  ref, onMounted } from 'vue';
     import { languagePack } from '../../languages/index'
-    import loadApp from '../layout/LoadApp.vue';
+    import loadApp from '../Layout/LoadApp.vue';
     import request from '../../utils/request'
-    import tableItem from '../layout/tableItem.vue'
+    import tableItem from '../Layout/tableItem.vue'
     const loadding = ref(false)
     const historys = ref()
     const theme = ref(localStorage.getItem('theme') || 'dark');

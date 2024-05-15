@@ -5,7 +5,7 @@ import PopCircle from './PopCircle.vue'
 import PopResult from './effect/result.vue'
 import request from '../../utils/request'
 import { formatUsdt, usdToVnd, formatVnd } from '../../utils/money'
-import Depoint from '../layout/person/depoit.vue';
+import Depoint from '../Layout/person/depoit.vue';
 import { languagePack } from '../../languages'
 
 const networkErr = ref(true)

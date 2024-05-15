@@ -2,13 +2,13 @@
 import { onMounted, ref } from 'vue';
 import { formatUsdt, usdToVnd, formatVnd } from '../../utils/money.js';
 import request from '../../utils/request';
-import loadApp from '../layout/LoadApp.vue';
-import supportAnalys from '../layout/person/supportAnalys.vue';
-import Depoint from '../layout/person/depoit.vue';
-import History from '../layout/person/history.vue';
-import Withdaw from '../layout/person/withdow.vue'
+import loadApp from '../Layout/LoadApp.vue';
+import supportAnalys from '../Layout/person/supportAnalys.vue';
+import Depoint from '../Layout/person/depoit.vue';
+import History from '../Layout/person/history.vue';
+import Withdaw from '../Layout/person/withdow.vue'
 import { OpenPopup } from '../../utils/plugin'
-import chart from '../layout/person/chart.vue'
+import chart from '../Layout/person/chart.vue'
 import { languagePack } from '../../languages';
 
 const loadding = ref(false)

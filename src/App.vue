@@ -3,7 +3,7 @@
 import store from "../src/stores";
 import { onMounted, onUnmounted, reactive, ref, nextTick, watch, computed, onBeforeMount } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
-// import Notification from './views/layout/Notification.vue'
+// import Notification from './views/Layout/Notification.vue'
 import View from './views/index.vue'
 import request from './utils/request'
 

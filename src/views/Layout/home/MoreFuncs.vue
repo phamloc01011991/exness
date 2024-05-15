@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 import { languagePack } from '../../../languages';
 const emit = defineEmits(['close-popup'])
 const showWithdow = ref(false)
-import Withdow from '../../layout/person/withdow.vue'
+import Withdow from '../../Layout/person/withdow.vue'
 const theme = ref(localStorage.getItem('theme') || 'dark')
 const closePopup = () => {
   emit('close-popup')
