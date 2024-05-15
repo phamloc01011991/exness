@@ -66,7 +66,7 @@ const router = createRouter({
     }
     // { path: '/:pathMatch(.*)*', redirect: '/' },
   ]
-})
+}) 
 
 // router.beforeEach((to, from, next) => {
 //   const publicPages = ["/"];
