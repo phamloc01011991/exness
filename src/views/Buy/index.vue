@@ -62,6 +62,7 @@ function loadViewByTradingView(COIN) {
       toolbar_bg: '#100f15',
       enable_publishing: false,
       hide_legend: true,
+      withdateranges: true,
       allow_symbol_change: false,
       save_image: false,
       studies: [
@@ -69,6 +70,7 @@ function loadViewByTradingView(COIN) {
           id: 'MASimple@tv-basicstudies',
           inputs: {
             length: 20
+
           }
         },
         {
@@ -90,29 +92,39 @@ function loadViewByTradingView(COIN) {
 
 function loadViewByTradingView1(COIN) {
   try {
-    let dt = new TradingView.widget(
-      {
-        "autosize": true,
-        "symbol":'FX:' + COIN,
-        "interval": "1",
-        "timezone": 'Asia/Ho_Chi_Minh',
-        "theme": theme.value || 'dark',
-        "style": "1",
-        "locale": "en",
-        "toolbar_bg": '#100f15',
-        "enable_publishing": true,
-        "hide_legend": true,
-        "withdateranges": true,
-        "hide_side_toolbar": false,
-        "allow_symbol_change": false,
-        "calendar": false,
-        "show_popup_button": true,
-        "popup_width": "1000",
-        "popup_height": "650",
-        "hide_volume": true,
-        "container_id": 'tradingview1'
-      }
-    )
+    let dt = new TradingView.widget({
+      autosize: true,
+      symbol: 'FX:' + COIN,
+      interval: '1',
+      timezone: 'Asia/Ho_Chi_Minh',
+      theme: theme.value || 'dark',
+      style: '1',
+      locale: 'en',
+      toolbar_bg: '#100f15',
+      enable_publishing: false,
+      hide_legend: true,
+      allow_symbol_change: false,
+      save_image: false,
+      withdateranges: true,
+      studies: [
+        {
+          id: 'MASimple@tv-basicstudies',
+          inputs: {
+            length: 20
+          }
+        },
+        {
+          id: 'MASimple@tv-basicstudies',
+          inputs: {
+            length: 100
+          }
+        }
+      ],
+      studies_overrides: {
+        'volume.volume.color.0': '#dfdfdf'
+      },
+      container_id: 'tradingview1'
+    })
   } catch (error) {
     console.log(error)
   }
@@ -122,7 +134,8 @@ function loadViewByTradingView1(COIN) {
 function changeForex() {
   coinDefaul.value = selectForex.value
   loadViewByTradingView(coinDefaul.value)
-  loadViewByTradingView1(coinDefaul.value)
+  replaceDomainPrefix()
+  // loadViewByTradingView1(coinDefaul.value)
 }
 // function btnShowPopBuy(command) {
 //   if (userLogined.value.status == 5) {
@@ -144,6 +157,10 @@ async function logoutFunction() {
 
 
 function transferType(type) {
+  if(type == 'b') {
+    loadViewByTradingView1(coinDefaul.value)
+    replaceDomainPrefix()
+  }
   var i, x, tablinks
   x = document.getElementsByClassName('wr')
   for (i = 0; i < x.length; i++) {
@@ -156,18 +173,35 @@ function transferType(type) {
   document.getElementById(type).classList.add('active')
   document.getElementById(type + '1').style.display = 'block'
 }
-
+function replaceDomainPrefix() {
+      var iframes = document.getElementsByTagName('iframe');
+      for (var i = 0; i < iframes.length; i++) {
+          var iframe = iframes[i];
+          var src = iframe.getAttribute('src');
+          
+          if (src && src.startsWith('https://s.tradingview')) {
+              // Thay thế tiền tố bằng "in.tradingview"
+              var newSrc = src.replace('https://s.tradingview', 'https://in.tradingview');
+              
+              // Gán lại src mới cho iframe
+              iframe.setAttribute('src', newSrc);
+          }
+      }
+  }
 onMounted(async () => {
-
+ 
   if (router.currentRoute._value.params.id.length > 3) {
     coinDefaul.value = router.currentRoute._value.params.id.replace('/', '')
     loadViewByTradingView(coinDefaul.value)
-    loadViewByTradingView1(coinDefaul.value)
+    // loadViewByTradingView1(coinDefaul.value)
   } else {
     loadViewByTradingView(coinDefaul.value)
-    loadViewByTradingView1(coinDefaul.value)
+    // loadViewByTradingView1(coinDefaul.value)
   }
   selectForex.value = coinDefaul.value
+  replaceDomainPrefix()
+        
+
   await getListSympol(35)
 
 })

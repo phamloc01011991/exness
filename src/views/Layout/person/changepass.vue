@@ -68,14 +68,14 @@ async function changePassword() {
                 <div class="form-input">
                     <div class="form-control">
                       <i class='bx bx-lock f-icon' ></i>
-                        <input v-model="newPassword" :placeholder="languagePack.person_changepass_recurrent" type="text" autocomplete="off"/>
+                        <input v-model="newPassword" placeholder="Mật khẩu mới" type="text" autocomplete="off"/>
                     </div>
                 </div>
                 <p class="err1">{{ err2 }}</p>
                 <div class="form-input">
                     <div class="form-control">
                       <i class='bx bx-lock f-icon' ></i>
-                        <input v-model="reNewPassword" :placeholder="languagePack.person_changepass_newpass" type="text" autocomplete="off"/>
+                        <input v-model="reNewPassword" placeholder="Xác nhận lại mật khẩu mới" type="text" autocomplete="off"/>
                     </div>
                 </div>
                 <p class="err1">{{ err3 }}</p>

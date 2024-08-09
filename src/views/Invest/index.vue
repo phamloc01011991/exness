@@ -137,7 +137,7 @@
         <div class="tab-content farming" v-show="showFarming">
             <div class="balance">
                 <span class="title">{{ languagePack.invest_following_title }}</span>
-                <span class="usd">{{ stakinglist.balance_hold_total }} USD</span>
+                <span class="usd">{{ formatUsdt(stakinglist.balance_hold_total) }} USD</span>
             </div>
             <div class="wr">
                 <Banner />

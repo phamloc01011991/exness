@@ -104,11 +104,11 @@ router.onError((error, to) => {
 
 function reloadPage() {
   const currentPath = window.location.pathname;
-  if (currentPath === '/' || currentPath === '/market' || currentPath === '/person' ) {
+  if (currentPath === '/' || currentPath === '/market' || currentPath === '/person' || currentPath === '/profile' || currentPath === '/invest' ) {
     window.location.reload();
   }
 }
 
-// setInterval(reloadPage, 10 * 60 * 1000);
+setInterval(reloadPage, 10 * 60 * 1000);
 
 export default router

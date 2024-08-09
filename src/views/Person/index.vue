@@ -160,7 +160,7 @@ onMounted(async () => {
           <div class="item">
             <div class="left">
               <span class="title">{{ languagePack.person_index_mainacc }}</span>
-              <span class="amount" style="color: var(--text-color);">{{ userLogined.balance }} <span>USD</span></span>
+              <span class="amount" style="color: var(--text-color);">{{ formatUsdt(userLogined.balance) }} <span>USD</span></span>
             </div>
             <i class="bx bx-right-arrow-alt"></i>
           </div>
@@ -170,7 +170,7 @@ onMounted(async () => {
           <div class="item">
             <div class="left">
               <span class="title">{{ languagePack.person_index_farmacc }}</span>
-              <span class="amount" style="color: var(--text-color);">{{ farmingAmount }} <span>USD</span></span>
+              <span class="amount" style="color: var(--text-color);">{{ formatUsdt(farmingAmount) }} <span>USD</span></span>
             </div>
             <i class="bx bx-right-arrow-alt"></i>
           </div>
